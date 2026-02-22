@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Damenbrillen | Elya – Luxus Eyewear für Damen</title>
+    <meta name="description"
+        content="Entdecken Sie exklusive Luxus-Brillen für Damen von Chanel, Gucci, Prada, Dior und weiteren Premium-Marken.">
+
+    <!-- AOS - Animate On Scroll Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/cookie-banner.css">
+    <link rel="stylesheet" href="/css/components.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Playfair+Display:wght@700;800&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="header" role="banner">
+        <!-- Logo -->
+        <div class="header-logo">
+            <a href="/index.html">
+                <img src="/assets/images/logo.png" alt="Elya Luxury Eyewear" class="logo-img">
+            </a>
+        </div>
+
+        <!-- Navigation Bar -->
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="navbar-container">
+                <!-- Burger Menu (Mobile) -->
+                <button class="burger-menu" id="burgerMenu" aria-label="Menu" aria-expanded="false"
+                    aria-controls="navMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <!-- Left Icons (Filter, Search) -->
+                <div class="nav-icons-left" role="toolbar" aria-label="Search and filter">
+                    <button class="icon-btn" data-role="filter-trigger" aria-label="Filter">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                            <path d="M2 3H18V4.5C18 5 17.5 5.5 17 5.5H3C2.5 5.5 2 5 2 4.5V3Z" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="currentColor" />
+                            <path d="M4 5V15C4 15.5 4.5 16 5 16H6C6.5 16 7 15.5 7 15V5" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M13 5V15C13 15.5 13.5 16 14 16H15C15.5 16 16 15.5 16 15V5" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <button class="icon-btn" data-role="search-trigger" aria-label="Suche">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                            <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.5" />
+                            <path d="M12 12L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Main Navigation -->
+                <ul class="nav-menu" id="navMenu" role="menubar">
+                    <li><a href="/index.html#newArrivals" class="nav-link" data-i18n="nav_whats_new">WHAT'S NEW?</a>
+                    </li>
+                    <li class="nav-item-with-submenu" role="menuitem" aria-haspopup="menu">
+                        <a href="#" class="nav-link" id="sonnenbrillenTrigger" aria-expanded="false"
+                            aria-controls="sonnenbrillenMegaMenu" data-i18n="nav_sonnenbrillen">SONNENBRILLEN</a>
+                        <div class="mega-menu" id="sonnenbrillenMegaMenu" role="menu">
+                            <div class="mega-menu-content">
+                                <div class="mega-column">
+                                    <h3 data-i18n="cat_kategorien">KATEGORIEN</h3>
+                                    <ul role="menu">
+                                        <li role="menuitem"><a href="/pages/herren.html"
+                                                data-i18n="cat_herren">Herren</a></li>
+                                        <li role="menuitem"><a href="/pages/damen.html" data-i18n="cat_damen">Damen</a>
+                                        </li>
+                                        <li role="menuitem"><a href="/pages/unisex.html"
+                                                data-i18n="cat_unisex">Unisex</a></li>
+                                        <li role="menuitem"><a href="/pages/alle-sonnenbrillen.html"
+                                                data-i18n="cat_alle_sonnenbrillen">Alle Sonnenbrillen</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-column">
+                                    <h3 data-i18n="cat_marken">MARKEN</h3>
+                                    <ul role="menu">
+                                        <li role="menuitem"><a
+                                                href="/pages/brand.html?brand=tom-ford&category=sonnenbrillen">Tom
+                                                Ford</a>
+                                        </li>
+                                        <li role="menuitem"><a
+                                                href="/pages/brand.html?brand=gucci&category=sonnenbrillen">Gucci</a>
+                                        </li>
+                                        <li role="menuitem"><a
+                                                href="/pages/brand.html?brand=chanel&category=sonnenbrillen">Chanel</a>
+                                        </li>
+                                        <li role="menuitem"><a
+                                                href="/pages/brand.html?brand=miu-miu&category=sonnenbrillen">Miu
+                                                Miu</a></li>
+                                        <li role="menuitem"><a
+                                                href="/pages/brand.html?brand=cazal&category=sonnenbrillen">Cazal</a>
+                                        </li>
+                                        <li role="menuitem"><a
+                                                href="/pages/brand.html?brand=prada&category=sonnenbrillen">Prada</a>
+                                        </li>
+                                        <li role="menuitem"><a
+                                                href="/pages/brand.html?brand=dita&category=sonnenbrillen">Dita</a></li>
+                                        <li role="menuitem"><a
+                                                href="/pages/brand.html?brand=cartier&category=sonnenbrillen">Cartier</a>
+                                        </li>
+                                        <li role="menuitem"><a
+                                                href="/pages/brand.html?brand=loewe&category=sonnenbrillen">Loewe</a>
+                                        </li>
+                                        <li role="menuitem"><a
+                                                href="/pages/brand.html?brand=saint-laurent&category=sonnenbrillen">Saint
+                                                Laurent</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-column">
+                                    <h3 data-i18n="cat_get_the_look">GET THE LOOK</h3>
+                                    <ul role="menu">
+                                        <li role="menuitem"><a href="/pages/get-the-look.html#rectangle"
+                                                data-i18n="shape_rectangle">Rechteckige Sonnenbrillen</a></li>
+                                        <li role="menuitem"><a href="/pages/get-the-look.html#aviator"
+                                                data-i18n="shape_aviator">Pilotenbrillen</a></li>
+                                        <li role="menuitem"><a href="/pages/get-the-look.html#round"
+                                                data-i18n="shape_round">Runde Sonnenbrillen</a></li>
+                                        <li role="menuitem"><a href="/pages/get-the-look.html#cat-eye"
+                                                data-i18n="shape_cat_eye">Cat-Eye Sonnenbrillen</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item-with-submenu" role="menuitem" aria-haspopup="menu">
+                        <a href="#" class="nav-link" id="brillenTrigger" aria-expanded="false"
+                            aria-controls="brillenMegaMenu" data-i18n="nav_brillen">BRILLEN</a>
+                        <div class="mega-menu" id="brillenMegaMenu" role="menu">
+                            <div class="mega-menu-content">
+                                <div class="mega-column">
+                                    <h3 data-i18n="cat_kategorien">KATEGORIEN</h3>
+                                    <ul role="menu">
+                                        <li role="menuitem"><a href="/pages/herren.html"
+                                                data-i18n="cat_herren">Herren</a></li>
+                                        <li role="menuitem"><a href="/pages/damen.html" data-i18n="cat_damen">Damen</a>
+                                        </li>
+                                        <li role="menuitem"><a href="/pages/unisex.html"
+                                                data-i18n="cat_unisex">Unisex</a></li>
+                                        <li role="menuitem"><a href="/pages/alle-brillen.html"
+                                                data-i18n="cat_alle_brillen">Alle Brillen</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-column">
+                                    <h3 data-i18n="cat_marken">MARKEN</h3>
+                                    <ul role="menu">
+                                        <li role="menuitem"><a
+                                                href="/pages/brand.html?brand=prada&category=brillen">Prada</a>
+                                        </li>
+                                        <li role="menuitem"><a
+                                                href="/pages/brand.html?brand=gucci&category=brillen">Gucci</a>
+                                        </li>
+                                        <li role="menuitem"><a
+                                                href="/pages/brand.html?brand=chanel&category=brillen">Chanel</a></li>
+                                        <li role="menuitem"><a
+                                                href="/pages/brand.html?brand=miu-miu&category=brillen">Miu
+                                                Miu</a></li>
+                                        <li role="menuitem"><a
+                                                href="/pages/brand.html?brand=cartier&category=brillen">Cartier</a></li>
+                                        <li role="menuitem"><a
+                                                href="/pages/brand.html?brand=tom-ford&category=brillen">Tom
+                                                Ford</a></li>
+                                        <li role="menuitem"><a
+                                                href="/pages/brand.html?brand=cazal&category=brillen">Cazal</a>
+                                        </li>
+                                        <li role="menuitem"><a
+                                                href="/pages/brand.html?brand=dita&category=brillen">Dita</a>
+                                        </li>
+                                        <li role="menuitem"><a
+                                                href="/pages/brand.html?brand=loewe&category=brillen">Loewe</a>
+                                        </li>
+                                        <li role="menuitem"><a
+                                                href="/pages/brand.html?brand=saint-laurent&category=brillen">Saint
+                                                Laurent</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="mega-column">
+                                    <h3 data-i18n="cat_get_the_look">GET THE LOOK</h3>
+                                    <ul role="menu">
+                                        <li role="menuitem"><a href="/pages/get-the-look.html#round"
+                                                data-i18n="shape_round">Runde Brillen</a></li>
+                                        <li role="menuitem"><a href="/pages/get-the-look.html#rectangle"
+                                                data-i18n="shape_rectangle">Rechteckige Brillen</a></li>
+                                        <li role="menuitem"><a href="/pages/get-the-look.html#aviator"
+                                                data-i18n="shape_aviator">Pilotbrillen</a></li>
+                                        <li role="menuitem"><a href="/pages/get-the-look.html#rimless"
+                                                data-i18n="shape_rimless">Randlos</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="/pages/preloved.html" class="nav-link" data-i18n="nav_preloved">PRELOVED</a></li>
+                    <li><a href="/index.html#saleProducts" class="nav-link nav-sale" data-i18n="nav_sale">SALE</a></li>
+                </ul>
+
+                <!-- Right Icons (Language, Support, Cart) -->
+                <div class="nav-icons" role="toolbar" aria-label="Site utilities">
+                    <!-- Language Selector -->
+                    <div class="language-selector">
+                        <button class="icon-btn language-btn" id="languageBtn" aria-label="Sprache wählen"
+                            aria-haspopup="true">
+                            <span class="language-code">DE</span>
+                        </button>
+                        <div class="language-dropdown" id="languageDropdown" role="menu">
+                            <button class="language-option" data-lang="de" role="menuitem">DE</button>
+                            <button class="language-option" data-lang="en" role="menuitem">EN</button>
+                            <button class="language-option" data-lang="fr" role="menuitem">FR</button>
+                            <button class="language-option" data-lang="es" role="menuitem">ES</button>
+                        </div>
+                    </div>
+                    <a href="/pages/support.html" class="icon-btn support-btn" aria-label="Hilfe & Kontakt"
+                        title="Hilfe & Kontakt">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                            <circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1.5" />
+                            <path
+                                d="M10 14V14.01M10 11C10 9.5 11.5 9 11.5 7.5C11.5 6.67 10.83 6 10 6C9.17 6 8.5 6.67 8.5 7.5"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                        </svg>
+                    </a>
+                    <a href="/pages/cart.html" class="icon-btn cart-btn" aria-label="Warenkorb">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                            <path d="M2 4H4L6 14C6.2 15 7.1 16 8.2 16H15C16.1 16 17 15 17.2 14L19 7H5"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <span class="cart-badge"></span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Filter Sidebar -->
+    <div class="filter-sidebar" data-role="filter-sidebar">
+        <div class="filter-sidebar__header">
+            <button class="filter-sidebar__close" data-role="filter-close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </button>
+            <h3 class="filter-sidebar__title">FILTER</h3>
+            <button class="btn btn--text" data-role="filter-reset">Reset</button>
+        </div>
+
+        <div class="filter-content">
+            <!-- Brand Filter -->
+            <div class="filter-group">
+                <h4 class="filter-title">MARKEN</h4>
+                <div class="filter-options">
+                    <label class="filter-checkbox">
+                        <input type="checkbox" name="brand" value="CHANEL">
+                        <span>Chanel</span>
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" name="brand" value="GUCCI">
+                        <span>Gucci</span>
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" name="brand" value="PRADA">
+                        <span>Prada</span>
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" name="brand" value="MIU MIU">
+                        <span>Miu Miu</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Price Filter -->
+            <div class="filter-group">
+                <h4 class="filter-title">PREIS</h4>
+                <div class="filter-price">
+                    <div class="price-inputs">
+                        <input type="number" id="priceMinInput" value="0" min="0" max="1000">
+                        <span>bis</span>
+                        <input type="number" id="priceMaxInput" value="1000" min="0" max="1000">
+                    </div>
+                    <input type="range" id="priceMin" class="price-slider" min="0" max="1000" value="0">
+                    <input type="range" id="priceMax" class="price-slider" min="0" max="1000" value="1000">
+                </div>
+            </div>
+
+            <!-- Apply Button -->
+            <button class="btn btn--primary" data-role="filter-apply">FILTER ANWENDEN</button>
+        </div>
+    </div>
+
+    <!-- Filter Overlay -->
+    <div class="overlay" data-role="filter-overlay"></div>
+
+    <!-- Search Sidebar -->
+    <div class="search-sidebar" data-role="search-sidebar">
+        <div class="search-sidebar__header">
+            <h3 class="search-sidebar__title">SUCHE</h3>
+            <button class="search-sidebar__close" data-role="search-close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </button>
+        </div>
+        <div class="search-sidebar__content">
+            <div class="search-sidebar__input-wrapper">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" class="search-sidebar__icon">
+                    <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.5" />
+                    <path d="M12 12L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+                <input type="text" class="search-sidebar__input" data-role="search-input"
+                    placeholder="Suche nach Produkten, Marken..." autocomplete="off">
+            </div>
+            <div class="search-sidebar__results" data-role="search-results">
+                <div class="search__hint">Geben Sie einen Suchbegriff ein</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search Overlay -->
+    <div class="overlay" data-role="search-overlay"></div>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-image">
+                <img src="/assets/images/hero-banner.jpg" alt="Damenbrillen">
+            </div>
+            <div class="hero-text">
+                <h2 class="hero-headline" data-i18n="hero_damen_title">Damenbrillen</h2>
+                <p class="hero-subline" data-i18n="hero_damen_subtitle">Exklusive Brillen für die moderne Frau</p>
+            </div>
+        </section>
+
+        <!-- Damen Brillen -->
+        <section class="section section--women">
+            <div class="section__header" data-aos="fade-up">
+                <h2 class="section__title" data-i18n="section_title_damen">Brillen für Damen</h2>
+                <p class="section__subtitle" data-i18n="section_subtitle_damen">Entdecken Sie unsere exklusive
+                    Damenkollektionen</p>
+            </div>
+            <div class="product-grid" data-role="product-grid" data-collection="women" data-aos="fade-up"
+                data-aos-delay="100">
+                <!-- Products will be inserted here via JS -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="/assets/images/logo.png" alt="Elya Eyewear" class="footer-logo-img">
+                <p class="footer-tagline" data-i18n="footer_tagline">Luxus vor den Augen und im Charakter</p>
+            </div>
+            <div class="footer-links">
+                <h4 data-i18n="footer_legal">RECHTLICHES</h4>
+                <ul>
+                    <li><a href="/pages/impressum.html" data-i18n="footer_impressum">Impressum</a></li>
+                    <li><a href="/pages/datenschutz.html" data-i18n="footer_datenschutz">Datenschutz</a></li>
+                    <li><a href="/pages/agb.html" data-i18n="footer_agb">AGB</a></li>
+                    <li><a href="/pages/widerruf.html" data-i18n="footer_widerruf">Widerrufsrecht</a></li>
+                    <li><a href="#" onclick="openCookieSettings(); return false;"
+                            data-i18n="footer_cookies">Cookie-Einstellungen</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4 data-i18n="footer_follow_us">FOLGE UNS</h4>
+                <ul>
+                    <li><a href="https://instagram.com/elyavision" target="_blank" rel="noopener noreferrer"><svg
+                                width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                <circle cx="12" cy="12" r="4" />
+                                <circle cx="18" cy="6" r="1.5" fill="currentColor" />
+                            </svg> Instagram</a></li>
+                    <li><a href="https://tiktok.com/@elyavision" target="_blank" rel="noopener noreferrer"><svg
+                                width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M9 12a4 4 0 1 0 4 4V4c.5 2.5 2.5 4 5 4" />
+                            </svg> TikTok</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4 data-i18n="footer_service">SERVICE</h4>
+                <ul>
+                    <li><a href="/pages/support.html" data-i18n="common_support">Hilfe & Kontakt</a></li>
+                    <li><a href="/pages/support.html#faq" data-i18n="footer_faq">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footer_rights">&copy; 2026 Elya Vision. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- AOS - Animate On Scroll -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+    </script>
+
+    <script type="module" src="/js/app.js"></script>
+</body>
+
+</html>

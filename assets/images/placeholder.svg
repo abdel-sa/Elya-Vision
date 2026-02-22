@@ -1,0 +1,8 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#faf8f5"/>
+  <text x="200" y="130" font-family="'Playfair Display', Georgia, serif" font-size="72" font-weight="700" text-anchor="middle" fill="#1a2847" letter-spacing="-2">ELYA</text>
+  <path d="M 70 155 Q 200 165 330 155" stroke="#d4af37" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <text x="200" y="210" font-family="'Playfair Display', Georgia, serif" font-size="14" text-anchor="middle" fill="#1a2847" letter-spacing="4">EYEWEAR</text>
+  <circle cx="65" cy="210" r="2.5" fill="#d4af37"/>
+  <circle cx="335" cy="210" r="2.5" fill="#d4af37"/>
+</svg>

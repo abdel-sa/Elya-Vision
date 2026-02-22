@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warenkorb | Elya Luxury Eyewear</title>
+    <meta name="description"
+        content="Schließen Sie Ihren Einkauf ab. Kostenloser Versand ab €100, sichere Zahlung und 30 Tage Rückgaberecht bei Elya Designer Brillen.">
+    <meta name="robots" content="noindex, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://elya.at/cart.html">
+    <meta property="og:title" content="Warenkorb | Elya Luxury Eyewear">
+    <meta property="og:description"
+        content="Schließen Sie Ihren Einkauf ab. Kostenloser Versand ab €100 und sichere Zahlung.">
+    <meta property="og:image" content="https://elya.at/assets/images/og-image.jpg">
+    <meta property="og:site_name" content="Elya Luxury Eyewear">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:url" content="https://elya.at/cart.html">
+    <meta property="twitter:title" content="Warenkorb | Elya Luxury Eyewear">
+    <meta property="twitter:description"
+        content="Schließen Sie Ihren Einkauf ab. Kostenloser Versand ab €100 und sichere Zahlung.">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://elya.at/cart.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/cookie-banner.css">
+    <link rel="stylesheet" href="/css/components.css">
+    <link rel="stylesheet" href="/css/cart.css">
+</head>
+
+<body>
+    <!-- Header & Navigation -->
+    <header class="header" role="banner">
+        <div class="header-logo">
+            <a href="/index.html">
+                <img src="/assets/images/logo.png" alt="Elya Luxury Eyewear" class="logo-img">
+            </a>
+        </div>
+
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="navbar-container navbar-container--center">
+                <ul class="nav-menu nav-menu--center" id="navMenu" role="menubar">
+                    <li><a href="/index.html" class="nav-link" data-i18n="nav_back_home">Zurück zur Startseite</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="cart-container">
+        <div class="cart-header">
+            <h1 data-i18n="cart_title">Warenkorb</h1>
+            <p class="cart-subtitle" id="cartSubtitle">Sie haben <span id="itemCount">0</span> Artikel</p>
+        </div>
+
+        <div class="cart-wrapper">
+            <!-- Cart Items -->
+            <section class="cart-items-section">
+                <div class="cart-items" id="cartItems">
+                    <!-- Items will be rendered here -->
+                </div>
+
+                <!-- Empty State -->
+                <div class="empty-cart" id="emptyCart" style="display: none;">
+                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+                        <path d="M10 15H15L20 50C20.6 55 24.4 60 30 60H60C65.6 60 69.4 55 70 50L75 20H20"
+                            stroke="#d4af37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <circle cx="35" cy="65" r="3" fill="#d4af37" />
+                        <circle cx="60" cy="65" r="3" fill="#d4af37" />
+                    </svg>
+                    <h3 data-i18n="cart_empty">Warenkorb ist leer</h3>
+                    <p data-i18n="cart_empty_message">Fügen Sie Produkte hinzu, um mit dem Einkaufen zu beginnen</p>
+                    <a href="/index.html" class="btn btn-primary" data-i18n="cart_start_shopping">Zum Shoppen</a>
+                </div>
+            </section>
+
+            <!-- Cart Summary -->
+            <aside class="cart-summary">
+                <div class="summary-card">
+                    <h3 data-i18n="cart_summary_title">Bestellübersicht</h3>
+
+                    <div class="summary-row">
+                        <span data-i18n="cart_subtotal">Summe</span>
+                        <span id="subtotal">€0,00</span>
+                    </div>
+
+                    <div class="summary-row">
+                        <span data-i18n="cart_shipping_label">Versand</span>
+                        <span id="shipping">€0,00</span>
+                    </div>
+
+                    <div class="summary-row">
+                        <span data-i18n="cart_tax_label">Steuern (19%)</span>
+                        <span id="tax">€0,00</span>
+                    </div>
+
+                    <hr class="summary-divider">
+
+                    <div class="summary-row total">
+                        <span data-i18n="cart_total_label">Gesamtbetrag</span>
+                        <span id="total">€0,00</span>
+                    </div>
+
+                    <button class="btn btn-primary btn-full" id="checkoutBtn" data-i18n="checkout_btn">Zur
+                        Kasse</button>
+                    <a href="/index.html" class="btn btn-secondary btn-full"
+                        data-i18n="cart_continue_shopping">Weitereinkaufen</a>
+
+                    <div class="summary-benefits">
+                        <div class="benefit">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 16.2L4.8 12M9 16.2L20.2 5" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <span data-i18n="cart_benefit_shipping">Kostenloser Versand ab €100</span>
+                        </div>
+                        <div class="benefit">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 16.2L4.8 12M9 16.2L20.2 5" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <span data-i18n="cart_benefit_return">30 Tage Rückgaberecht</span>
+                        </div>
+                        <div class="benefit">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 16.2L4.8 12M9 16.2L20.2 5" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <span data-i18n="cart_benefit_secure">Sichere Zahlung</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="/assets/images/logo.png" alt="Elya Eyewear" class="footer-logo-img">
+                <p class="footer-tagline" data-i18n="footer_tagline">Luxus vor den Augen und im Charakter</p>
+            </div>
+            <div class="footer-links">
+                <h4 data-i18n="footer_legal">RECHTLICHES</h4>
+                <ul>
+                    <li><a href="/pages/impressum.html" data-i18n="footer_impressum">Impressum</a></li>
+                    <li><a href="/pages/datenschutz.html" data-i18n="footer_datenschutz">Datenschutz</a></li>
+                    <li><a href="/pages/agb.html" data-i18n="footer_agb">AGB</a></li>
+                    <li><a href="/pages/widerruf.html" data-i18n="footer_widerruf">Widerrufsrecht</a></li>
+                    <li><a href="#" onclick="openCookieSettings(); return false;"
+                            data-i18n="footer_cookies">Cookie-Einstellungen</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4 data-i18n="footer_follow_us">FOLGE UNS</h4>
+                <ul>
+                    <li><a href="https://instagram.com/elyavision" target="_blank" rel="noopener noreferrer"><svg
+                                width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                <circle cx="12" cy="12" r="4" />
+                                <circle cx="18" cy="6" r="1.5" fill="currentColor" />
+                            </svg> Instagram</a></li>
+                    <li><a href="https://tiktok.com/@elyavision" target="_blank" rel="noopener noreferrer"><svg
+                                width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M9 12a4 4 0 1 0 4 4V4c.5 2.5 2.5 4 5 4" />
+                            </svg> TikTok</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4 data-i18n="footer_service">SERVICE</h4>
+                <ul>
+                    <li><a href="/pages/support.html" data-i18n="common_support">Hilfe & Kontakt</a></li>
+                    <li><a href="/pages/support.html#faq" data-i18n="footer_faq">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footer_rights">&copy; 2026 Elya Vision. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="/js/cart-page.js"></script>
+</body>
+
+</html>
