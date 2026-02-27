@@ -73,29 +73,39 @@
     background: linear-gradient(135deg, #0d3320 0%, #1a5738 100%);
 }
 
-.brand-hero-prada {
-    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-}
-
-.brand-hero-cartier {
-    background: linear-gradient(135deg, #8b0000 0%, #a52a2a 100%);
-}
-
-.brand-hero-dita {
-    background: linear-gradient(135deg, #2c1810 0%, #4a2c20 100%);
-}
-
-.brand-hero-cazal {
-    background: linear-gradient(135deg, #1a2847 0%, #2a3f5f 100%);
-}
-
-.brand-hero-miumiu {
-    background: linear-gradient(135deg, #f5e6e8 0%, #e8d5d8 100%);
-}
-
 .brand-hero-miumiu .brand-name,
 .brand-hero-miumiu .brand-description {
     color: var(--color-dark-blue);
+}
+
+/* --- OPTION 1: Minimalistischer Clean Look (PRADA) --- */
+.brand-hero-prada {
+    background: transparent;
+    color: var(--color-text);
+    min-height: 200px;
+}
+
+.brand-hero-prada::before {
+    display: none;
+}
+
+.brand-hero-prada .brand-name {
+    color: var(--color-text);
+}
+
+.brand-hero-prada .brand-logo-image {
+    filter: none;
+    /* Zeige schwarzes Logo auf hellem Grund */
+}
+
+.brand-hero-prada .brand-description {
+    color: var(--color-text);
+}
+
+/* --- OPTION 3: Sticky Floating Header / No Banner (CAZAL) --- */
+.brand-hero-cazal {
+    display: none;
+    /* Banner wird komplett ausgeblendet */
 }
 
 .brand-hero-bottega {
@@ -199,7 +209,9 @@
 }
 
 @keyframes spin {
-    to { transform: rotate(360deg); }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 /* No Products Message */
@@ -449,7 +461,7 @@
     .brand-product-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .brand-name {
         font-size: 2.5rem;
     }
@@ -460,26 +472,26 @@
         min-height: 200px;
         padding: var(--spacing-2xl) var(--spacing-lg);
     }
-    
+
     .brand-name {
         font-size: 2rem;
         letter-spacing: 0.1em;
     }
-    
+
     .brand-description {
         font-size: 0.95rem;
     }
-    
+
     .brand-products {
         padding: var(--spacing-xl) var(--spacing-md);
     }
-    
+
     .brand-products-header {
         flex-direction: column;
         gap: var(--spacing-md);
         align-items: flex-start;
     }
-    
+
     .brand-product-grid {
         grid-template-columns: 1fr;
         gap: var(--spacing-md);
