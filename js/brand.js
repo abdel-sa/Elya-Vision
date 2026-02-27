@@ -149,8 +149,8 @@ function updateBrandHero() {
     const brandLogoImg = document.getElementById('brandLogoImage');
     const brandDescEl = document.getElementById('brandDescription');
 
-    if (heroSection && currentBrand.heroClass) {
-        heroSection.classList.add(currentBrand.heroClass);
+    if (heroSection) {
+        heroSection.className = 'brand-hero';
     }
 
     // Try to load brand logo, fallback to text

@@ -8,10 +8,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, var(--color-dark-blue) 0%, #2a3f5f 100%);
-    color: white;
+    background: transparent;
+    color: var(--color-text);
     text-align: center;
-    padding: var(--spacing-3xl) var(--spacing-xl);
+    padding: var(--spacing-xl) var(--spacing-xl) 0 var(--spacing-xl);
     position: relative;
     overflow: hidden;
 }
@@ -23,9 +23,8 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(212,175,55,0.1)" stroke-width="0.5"/></svg>');
-    background-size: 200px;
-    opacity: 0.5;
+    /* Pattern background removed for minimalist look */
+    display: none;
 }
 
 .brand-hero-content {
@@ -43,8 +42,9 @@
     height: auto;
     max-height: 150px;
     object-fit: contain;
-    filter: brightness(0) invert(1);
-    opacity: 0.95;
+    /* Ensure logos are visible on white background without inversion */
+    filter: none;
+    opacity: 1;
 }
 
 .brand-name {
@@ -53,80 +53,11 @@
     font-weight: 400;
     letter-spacing: 0.2em;
     margin: 0;
-    color: var(--color-gold);
+    color: var(--color-text);
 }
 
 .brand-description {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    opacity: 0.9;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-/* Brand-specific hero backgrounds */
-.brand-hero-tom-ford {
-    background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
-}
-
-.brand-hero-gucci {
-    background: linear-gradient(135deg, #0d3320 0%, #1a5738 100%);
-}
-
-.brand-hero-miumiu .brand-name,
-.brand-hero-miumiu .brand-description {
-    color: var(--color-dark-blue);
-}
-
-/* --- OPTION 1: Minimalistischer Clean Look (PRADA) --- */
-.brand-hero-prada {
-    background: transparent;
-    color: var(--color-text);
-    min-height: 200px;
-}
-
-.brand-hero-prada::before {
     display: none;
-}
-
-.brand-hero-prada .brand-name {
-    color: var(--color-text);
-}
-
-.brand-hero-prada .brand-logo-image {
-    filter: none;
-    /* Zeige schwarzes Logo auf hellem Grund */
-}
-
-.brand-hero-prada .brand-description {
-    color: var(--color-text);
-}
-
-/* --- OPTION 3: Sticky Floating Header / No Banner (CAZAL) --- */
-.brand-hero-cazal {
-    display: none;
-    /* Banner wird komplett ausgeblendet */
-}
-
-.brand-hero-bottega {
-    background: linear-gradient(135deg, #2d4a3e 0%, #3d5a4e 100%);
-}
-
-.brand-hero-celine {
-    background: linear-gradient(135deg, #f5f0e8 0%, #e8e0d5 100%);
-}
-
-.brand-hero-celine .brand-name,
-.brand-hero-celine .brand-description {
-    color: var(--color-dark-blue);
-}
-
-.brand-hero-chanel {
-    background: linear-gradient(135deg, #1a1a1a 0%, #000 100%);
-}
-
-.brand-hero-fendi {
-    background: linear-gradient(135deg, #8b7355 0%, #a08060 100%);
 }
 
 /* Brand Products Section */
