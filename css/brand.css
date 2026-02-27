@@ -34,24 +34,26 @@
 }
 
 .brand-logo-wrapper {
-    margin-bottom: var(--spacing-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
 }
 
 .brand-logo-image {
-    max-width: 450px;
+    max-width: 250px;
     height: auto;
-    max-height: 150px;
+    max-height: 40px;
     object-fit: contain;
-    /* Ensure logos are visible on white background without inversion */
     filter: none;
     opacity: 1;
 }
 
 .brand-name {
     font-family: var(--font-serif);
-    font-size: 3.5rem;
-    font-weight: 400;
-    letter-spacing: 0.2em;
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
     margin: 0;
     color: var(--color-text);
 }
@@ -68,8 +70,8 @@
 }
 
 .brand-products-header {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
     margin-bottom: var(--spacing-2xl);
     padding-bottom: var(--spacing-lg);
@@ -81,11 +83,13 @@
     font-size: 1.2rem;
     font-weight: 400;
     color: var(--color-light-gray);
+    margin: 0;
 }
 
 .brand-sort {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     gap: var(--spacing-md);
 }
 
@@ -394,23 +398,19 @@
     }
 
     .brand-name {
-        font-size: 2.5rem;
+        font-size: 1.5rem;
+    }
+
+    .brand-logo-image {
+        max-width: 180px;
+        max-height: 30px;
     }
 }
 
 @media (max-width: 600px) {
-    .brand-hero {
-        min-height: 200px;
-        padding: var(--spacing-2xl) var(--spacing-lg);
-    }
-
     .brand-name {
-        font-size: 2rem;
+        font-size: 1.3rem;
         letter-spacing: 0.1em;
-    }
-
-    .brand-description {
-        font-size: 0.95rem;
     }
 
     .brand-products {
@@ -418,9 +418,30 @@
     }
 
     .brand-products-header {
+        display: flex;
         flex-direction: column;
         gap: var(--spacing-md);
-        align-items: flex-start;
+        align-items: center;
+        text-align: center;
+    }
+
+    .brand-products-header h2 {
+        order: 2;
+        font-size: 1rem;
+        width: 100%;
+        text-align: left;
+    }
+
+    .brand-logo-wrapper {
+        order: 1;
+        width: 100%;
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .brand-sort {
+        order: 3;
+        width: 100%;
+        justify-content: flex-start;
     }
 
     .brand-product-grid {
