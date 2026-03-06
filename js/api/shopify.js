@@ -47,6 +47,7 @@ export async function fetchProducts(first = 100) {
             handle
             description
             vendor
+            tags
             availableForSale
             productType
             priceRange {
