@@ -98,21 +98,79 @@
     color: var(--color-light-gray);
 }
 
-.brand-sort select {
-    padding: var(--spacing-sm) var(--spacing-lg);
-    border: 1px solid var(--color-border);
-    border-radius: 4px;
+/* Custom Sort Dropdown (Minimalist Option 1) */
+.custom-sort {
+    position: relative;
     font-family: var(--font-sans);
-    font-size: 0.9rem;
-    background-color: white;
-    cursor: pointer;
-    transition: border-color var(--transition-normal);
+    font-size: 0.85rem;
+    color: var(--color-text);
+    user-select: none;
 }
 
-.brand-sort select:hover,
-.brand-sort select:focus {
-    border-color: var(--color-gold);
-    outline: none;
+.custom-sort__header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    padding: var(--spacing-sm) 0;
+    transition: color var(--transition-normal);
+}
+
+.custom-sort__header:hover {
+    color: var(--color-gold);
+}
+
+.custom-sort__current {
+    font-weight: 500;
+}
+
+.custom-sort__icon {
+    transition: transform 0.3s ease;
+}
+
+.custom-sort.is-open .custom-sort__icon {
+    transform: rotate(180deg);
+}
+
+.custom-sort__list {
+    position: absolute;
+    top: calc(100% + 5px);
+    right: 0;
+    width: max-content;
+    min-width: 200px;
+    background: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+    list-style: none;
+    padding: var(--spacing-sm) 0;
+    margin: 0;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.custom-sort.is-open .custom-sort__list {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.custom-sort__item {
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: color var(--transition-normal);
+}
+
+.custom-sort__item:hover {
+    color: var(--color-gold);
+    background: transparent;
+}
+
+.custom-sort__item.is-selected {
+    font-weight: 600;
+    color: var(--color-gold);
 }
 
 /* Brand Product Grid */

@@ -339,8 +339,29 @@
             </div>
 
             <div class="brand-sort">
-                <label for="sortSelect" data-i18n="sort_label">Sortieren:</label>
-                <select id="sortSelect">
+                <div class="custom-sort" id="customSort">
+                    <div class="custom-sort__header" id="customSortHeader">
+                        <span data-i18n="sort_label">Sortieren nach:</span>
+                        <span class="custom-sort__current" id="customSortCurrent"
+                            data-i18n="sort_featured">Empfohlen</span>
+                        <svg class="custom-sort__icon" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M6 9l6 6 6-6" />
+                        </svg>
+                    </div>
+                    <ul class="custom-sort__list" id="customSortList">
+                        <li class="custom-sort__item is-selected" data-value="featured" data-i18n="sort_featured">
+                            Empfohlen</li>
+                        <li class="custom-sort__item" data-value="price-asc" data-i18n="sort_price_asc">Preis: Niedrig →
+                            Hoch</li>
+                        <li class="custom-sort__item" data-value="price-desc" data-i18n="sort_price_desc">Preis: Hoch →
+                            Niedrig</li>
+                        <li class="custom-sort__item" data-value="name-asc" data-i18n="sort_name_asc">Name: A → Z</li>
+                        <li class="custom-sort__item" data-value="name-desc" data-i18n="sort_name_desc">Name: Z → A</li>
+                    </ul>
+                </div>
+                <!-- Verborgenes Select für Abwärtskompatibilität, falls Scripte darauf zugreifen (wird per CSS display:none gesetzt) -->
+                <select id="sortSelect" style="display: none;">
                     <option value="featured" data-i18n="sort_featured">Empfohlen</option>
                     <option value="price-asc" data-i18n="sort_price_asc">Preis: Niedrig → Hoch</option>
                     <option value="price-desc" data-i18n="sort_price_desc">Preis: Hoch → Niedrig</option>

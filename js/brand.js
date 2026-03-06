@@ -353,14 +353,52 @@ function updateProductCount(count) {
 // ========================================
 
 function setupSort() {
+    const customSort = document.getElementById('customSort');
+    const customSortHeader = document.getElementById('customSortHeader');
+    const customSortCurrent = document.getElementById('customSortCurrent');
+    const customSortItems = document.querySelectorAll('.custom-sort__item');
     const sortSelect = document.getElementById('sortSelect');
 
-    if (sortSelect) {
-        sortSelect.addEventListener('change', () => {
-            const sortedProducts = sortProducts(brandProducts, sortSelect.value);
-            renderBrandProducts(sortedProducts);
+    if (!customSort || !sortSelect) return;
+
+    // Toggle dropdown open/close
+    customSortHeader.addEventListener('click', (e) => {
+        e.stopPropagation();
+        customSort.classList.toggle('is-open');
+    });
+
+    // Handle option click
+    customSortItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const value = item.getAttribute('data-value');
+            const textHTML = item.innerHTML;
+
+            // Update UI
+            customSortCurrent.innerHTML = textHTML;
+            customSortItems.forEach(el => el.classList.remove('is-selected'));
+            item.classList.add('is-selected');
+
+            // Sync with native select and trigger change
+            sortSelect.value = value;
+            sortSelect.dispatchEvent(new Event('change'));
+
+            // Close dropdown
+            customSort.classList.remove('is-open');
         });
-    }
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!customSort.contains(e.target)) {
+            customSort.classList.remove('is-open');
+        }
+    });
+
+    // Trigger sorting when the native select changes
+    sortSelect.addEventListener('change', () => {
+        const sortedProducts = sortProducts(brandProducts, sortSelect.value);
+        renderBrandProducts(sortedProducts);
+    });
 }
 
 function sortProducts(products, sortType) {
