@@ -15,6 +15,9 @@ export function initGridSwiper(container) {
   // Remove stale swiper class
   container.classList.remove('swiper');
 
+  // Only initialize Swiper on mobile — desktop uses the normal CSS grid
+  if (window.innerWidth >= 768) return;
+
   const cards = Array.from(container.children);
   if (cards.length === 0) return;
 
@@ -46,15 +49,9 @@ export function initGridSwiper(container) {
 
   container.appendChild(wrapper);
 
-  // Initialize Swiper: active on mobile, disabled on desktop
   new Swiper(container, {
     slidesPerView: 1.5,
     spaceBetween: 16,
     grabCursor: true,
-    breakpoints: {
-      768: {
-        enabled: false
-      }
-    }
   });
 }

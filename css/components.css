@@ -213,17 +213,6 @@
   }
 }
 
-/* On desktop: Swiper is disabled — make wrapper/slides transparent so
-   the parent grid layout applies directly to the product cards */
-.product-grid.swiper-disabled > .swiper-wrapper,
-.brand-product-grid.swiper-disabled > .swiper-wrapper {
-  display: contents !important;
-}
-
-.product-grid.swiper-disabled .swiper-slide,
-.brand-product-grid.swiper-disabled .swiper-slide {
-  display: contents;
-}
 
 .products-empty {
   grid-column: 1 / -1;
