@@ -149,10 +149,18 @@ function filterCachedByCollection(products, collectionHandle) {
   }
 
   // Special named collections → filter by tags
-  if (handle === 'bestsellers' || handle === 'new-arrivals' || handle === 'sale') {
+  if (handle === 'bestsellers' || handle === 'sale') {
     return products.filter(p => {
       const productTags = (p.tags || []).map(t => t.toLowerCase());
       return productTags.includes(handle);
+    });
+  }
+
+  // Handle 'new-arrivals' with 'new' alias
+  if (handle === 'new-arrivals') {
+    return products.filter(p => {
+      const productTags = (p.tags || []).map(t => t.toLowerCase());
+      return productTags.includes('new-arrivals') || productTags.includes('new');
     });
   }
 

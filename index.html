@@ -443,15 +443,6 @@
             offset: 100
         });
 
-        // Parallax Effect for Hero Section
-        window.addEventListener('scroll', function () {
-            const hero = document.querySelector('.hero-image img');
-            if (hero) {
-                const scrolled = window.pageYOffset;
-                const rate = scrolled * 0.5;
-                hero.style.transform = 'translateY(' + rate + 'px)';
-            }
-        });
     </script>
 
     <script type="module" src="/js/app.js"></script>
