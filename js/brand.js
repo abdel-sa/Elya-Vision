@@ -11,6 +11,7 @@ import { initNavigation } from './ui/navigation.js';
 import { updatePageTranslations, t } from './services/i18n-service.js';
 import { STRINGS, getBrandNotFoundText } from './config/strings.js';
 import { escapeHTML } from './utils/security.js';
+import { initGridSwiper } from './ui/swiper-grid.js';
 
 // Brand data with descriptions and images
 const brandData = {
@@ -284,6 +285,7 @@ function renderBrandProducts(products) {
 
     grid.innerHTML = products.map(product => createProductCard(product)).join('');
     setupAddToCartButtons();
+    initGridSwiper(grid);
 }
 
 function createProductCard(product) {

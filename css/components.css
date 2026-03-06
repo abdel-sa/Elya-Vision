@@ -182,7 +182,8 @@
 
 @media (max-width: 480px) {
   .product-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
   }
 }
 
@@ -191,6 +192,37 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
   }
+}
+
+/* ========================================
+   Swiper Mobile Carousel
+   ======================================== */
+
+/* On mobile: switch container to block so Swiper can take over layout */
+@media (max-width: 767px) {
+  .product-grid.swiper,
+  .brand-product-grid.swiper {
+    display: block;
+    overflow: hidden;
+    gap: 0;
+  }
+
+  .product-grid.swiper .swiper-slide,
+  .brand-product-grid.swiper .swiper-slide {
+    height: auto;
+  }
+}
+
+/* On desktop: Swiper is disabled — make wrapper/slides transparent so
+   the parent grid layout applies directly to the product cards */
+.product-grid.swiper-disabled > .swiper-wrapper,
+.brand-product-grid.swiper-disabled > .swiper-wrapper {
+  display: contents !important;
+}
+
+.product-grid.swiper-disabled .swiper-slide,
+.brand-product-grid.swiper-disabled .swiper-slide {
+  display: contents;
 }
 
 .products-empty {

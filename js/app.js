@@ -6,6 +6,7 @@
 import { initCartService, addToCart } from './services/cart-service.js';
 import { loadProducts, loadProductsByCollection, searchProducts, filterProducts } from './services/product-service.js';
 import { renderProducts, showLoadingSkeletons, hideLoading, showError } from './ui/product-card.js';
+import { initGridSwiper } from './ui/swiper-grid.js';
 import { openSearchSidebar, closeSearchSidebar, renderSearchResults } from './ui/search.js';
 import { openFilterSidebar, closeFilterSidebar, getActiveFilters, resetFilters, initPriceRangeSync } from './ui/filter.js';
 import { initNavigation } from './ui/navigation.js';
@@ -128,6 +129,8 @@ async function initProducts() {
         renderProducts(products, grid);
         currentContextProducts = products;
       }
+
+      initGridSwiper(grid);
     }
   } catch (error) {
     console.error('Error initializing products:', error);
@@ -250,7 +253,7 @@ function handleApplyFilters() {
 
   // Render filtered products
   const grids = document.querySelectorAll('[data-role="product-grid"]');
-  grids.forEach(grid => renderProducts(filtered, grid));
+  grids.forEach(grid => { renderProducts(filtered, grid); initGridSwiper(grid); });
 
   closeFilterSidebar();
 }
@@ -263,7 +266,7 @@ async function handleResetFilters() {
 
   // Restore original context products without reloading
   const grids = document.querySelectorAll('[data-role="product-grid"]');
-  grids.forEach(grid => renderProducts(currentContextProducts, grid));
+  grids.forEach(grid => { renderProducts(currentContextProducts, grid); initGridSwiper(grid); });
 }
 
 /**
