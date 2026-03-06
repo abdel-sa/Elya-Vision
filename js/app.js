@@ -80,11 +80,11 @@ async function initProducts() {
       hideLoading(grid);
 
       if (collection === 'bestsellers') {
-        const products = bestsellers.length > 0 ? bestsellers.slice(0, 4) : allProducts.slice(0, 4);
+        const products = bestsellers.slice(0, 4);
         renderProducts(products, grid);
         currentContextProducts = products;
       } else if (collection === 'new') {
-        const products = newArrivals.length > 0 ? newArrivals.slice(0, 4) : allProducts.slice(4, 8);
+        const products = newArrivals.slice(0, 4);
         renderProducts(products, grid);
         currentContextProducts = products;
       } else if (collection === 'sale') {
@@ -97,7 +97,7 @@ async function initProducts() {
           const type = (p.productType || '').toLowerCase();
           return type === 'brille' || type === 'brillen';
         });
-        const products = brillen.length > 0 ? brillen : allProducts;
+        const products = brillen;
         renderProducts(products, grid);
         currentContextProducts = products;
       } else if (collection === 'all-sonnenbrillen') {
@@ -106,7 +106,7 @@ async function initProducts() {
           const type = (p.productType || '').toLowerCase();
           return type === 'sonnenbrille' || type === 'sonnenbrillen';
         });
-        const products = sonnenbrillen.length > 0 ? sonnenbrillen : allProducts;
+        const products = sonnenbrillen;
         renderProducts(products, grid);
         currentContextProducts = products;
       } else if (collection === 'preloved') {

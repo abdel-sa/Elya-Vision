@@ -218,43 +218,16 @@ async function loadBrandProducts(brandName, category) {
             renderBrandProducts(products);
             updateProductCount(products.length);
         } else {
-            const mockProducts = getMockProductsByBrand(brandName);
-            brandProducts = mockProducts;
-            renderBrandProducts(mockProducts);
-            updateProductCount(mockProducts.length);
+            brandProducts = [];
+            renderBrandProducts([]);
+            updateProductCount(0);
         }
     } catch (error) {
-        const mockProducts = getMockProductsByBrand(brandName);
-        brandProducts = mockProducts;
-        renderBrandProducts(mockProducts);
-        updateProductCount(mockProducts.length);
+        console.error('Error loading brand products:', error);
+        brandProducts = [];
+        renderBrandProducts([]);
+        updateProductCount(0);
     }
-}
-
-// Mock products fallback
-function getMockProductsByBrand(brandName) {
-    // Sample mock products for each brand
-    const mockProductTemplates = [
-        { suffix: 'Classic', price: 450, color: 'Black' },
-        { suffix: 'Signature', price: 520, color: 'Gold' },
-        { suffix: 'Aviator', price: 495, color: 'Silver' },
-        { suffix: 'Round', price: 480, color: 'Brown' },
-        { suffix: 'Square', price: 550, color: 'Black' },
-        { suffix: 'Vintage', price: 620, color: 'Tortoise' }
-    ];
-
-    return mockProductTemplates.map((template, index) => ({
-        id: `mock-${brandName.toLowerCase()}-${index + 1}`,
-        name: `${brandName} ${template.suffix}`,
-        brand: brandName.toUpperCase(),
-        price: `€${template.price}`,
-        priceNumber: template.price,
-        image: '/assets/images/placeholder.svg',
-        color: template.color,
-        availability: index < 4 ? 'inStock' : 'outOfStock',
-        description: `Exklusive ${brandName} ${template.suffix} Kollektion.`,
-        handle: `${brandName.toLowerCase()}-${template.suffix.toLowerCase()}`
-    }));
 }
 
 // ========================================
