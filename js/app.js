@@ -14,6 +14,7 @@ import { updatePageTranslations, t } from './services/i18n-service.js';
 import { STRINGS } from './config/strings.js';
 import { STATE_CLASSES } from './config/constants.js';
 import { cookieManager } from './ui/cookie-manager.js';
+import { injectCartDrawer, openCartDrawer } from './ui/cart-drawer.js';
 
 // Store current page's base products for context-aware filtering
 let currentContextProducts = [];
@@ -27,6 +28,10 @@ async function initApp() {
   // Initialize services
   initCartService();
   cookieManager.init();
+
+  // Inject side cart drawer into DOM (runs once, no-op if already present)
+  injectCartDrawer();
+  interceptCartIconLinks();
 
   // Initialize UI components
   initNavigation();
@@ -292,7 +297,7 @@ function initAddToCartButtons() {
     const result = addToCart(product);
 
     if (result.success) {
-      // Visual feedback
+      // Brief visual tick on the button, then open drawer
       const originalText = btn.textContent;
       btn.textContent = t(STRINGS.PRODUCT_ADDED_TO_CART);
       btn.classList.add(STATE_CLASSES.DISABLED);
@@ -300,8 +305,23 @@ function initAddToCartButtons() {
       setTimeout(() => {
         btn.textContent = originalText;
         btn.classList.remove(STATE_CLASSES.DISABLED);
-      }, 1500);
+      }, 1000);
+
+      // Open side cart immediately
+      openCartDrawer();
     }
+  });
+}
+
+/**
+ * Intercept cart icon clicks — open drawer instead of navigating to cart.html
+ */
+function interceptCartIconLinks() {
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('a[href*="cart.html"]');
+    if (!link) return;
+    e.preventDefault();
+    openCartDrawer();
   });
 }
 
