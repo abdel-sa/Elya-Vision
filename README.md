@@ -1,66 +1,64 @@
-# Elya Vision - Headless Shopify Frontend
+Elya Vision – Headless Shopify Frontend
+A modern, high-performance headless eCommerce frontend for Elya Vision, built to interface securely with the Shopify Storefront API. This project prioritizes a premium user experience, fast load times, and robust security practices without the overhead of heavy JavaScript frameworks.
 
-![Elya Vision Placeholder](public/assets/images/placeholder.png)
+Key Features
 
-A modern, high-performance headless eCommerce frontend for **Elya Vision**, built to interface securely with the Shopify Storefront API. This project prioritizes a premium user experience, fast load times, and robust security practices without the overhead of heavy JavaScript frameworks.
+Headless Architecture – Decoupled from Shopify Liquid themes; consumes the Shopify Storefront GraphQL API directly.
+Vanilla JavaScript – Lightweight, zero-dependency frontend logic using standard HTML5, CSS3, and ES Modules.
+Security First – Comprehensive XSS sanitization (escapeHTML) across all dynamically rendered components. Strict privacy compliance with zero PII written to localStorage.
+Production Build Pipeline – Uses Vite for efficient bundling, minification, and cache-busting hashing.
+Multilingual Support (i18n) – Fully internationalized UI strings via dynamic tagging.
+SEO Optimized – Pre-configured sitemap.xml and robots.txt included out of the box.
 
-## ✨ Key Features
-- **Headless Architecture**: Decoupled from Shopify liquid themes; consumes Shopify Storefront GraphQL API.
-- **Vanilla JavaScript**: Lightweight, zero-dependency frontend logic (`Vanilla JS`, `HTML5`, `CSS3`).
-- **Security First**: Comprehensive XSS sanitization (`escapeHTML`) across all dynamically rendered components, and strict privacy compliance (zero PII written to `localStorage`).
-- **Production Build Pipeline**: Employs `Vite` for efficient bundling, minification, and cache-busting hashing.
-- **Multilingual Support (i18n)**: Fully internationalized strings via dynamic tagging.
-- **SEO Optimized**: Pre-configured `sitemap.xml` and `robots.txt` out of the box.
 
-## 🛠 Tech Stack
-- **HTML/CSS/JS** (Vanilla Web Standards)
-- **Vite** (Build Tool & Dev-Server)
-- **Shopify Storefront API** (Backend & Data Source)
-- **ES Modules** (for component-based logic)
+Tech Stack
+LayerTechnologyFrontendHTML5, CSS3, Vanilla JavaScriptBuild ToolViteData SourceShopify Storefront API (GraphQL)Module SystemES Modules
 
-## 🚀 Setup & Installation
+Setup and Installation
+Prerequisites
 
-### Prerequisites
-- Node.js (v18+ recommended)
-- A Shopify Store with a generated **Storefront API Access Token**.
+Node.js v18 or later
+A Shopify Store with a generated Storefront API Access Token
 
-### 1. Clone the repository
-```bash
-git clone {YOUR_REPOSITORY_URL}
-cd {YOUR_REPOSITORY_DIRECTORY}
-```
+1. Clone the repository
+bashgit clone https://github.com/abdel-sa/elya-vision.git
+cd elya-vision
+2. Install dependencies
+bashnpm install
+3. Configure environment variables
+Copy the example environment file and insert your Shopify credentials:
+bashcp .env.example .env
+Edit .env:
+envVITE_SHOPIFY_STOREFRONT_TOKEN=your_token_here
+4. Start the development server
+bashnpm run dev
+The application will be available at http://localhost:5173.
+5. Production build
+Generate a minified, cache-busted production build:
+bashnpm run build
+Output is written to the /dist directory and is ready for deployment.
 
-### 2. Install dependencies
-```bash
-npm install
-```
+Project Structure
+elya-vision/
+├── public/
+│   ├── assets/
+│   ├── sitemap.xml
+│   └── robots.txt
+├── src/
+│   ├── components/      # Modular UI components (ES Modules)
+│   ├── services/        # Shopify API client and data layer
+│   ├── utils/           # Sanitization, i18n helpers
+│   └── main.js          # Application entry point
+├── .env.example
+├── vite.config.js
+└── package.json
 
-### 3. Configure Environment Variables
-Copy the `.env.example` file to create a local `.env` file:
-```bash
-cp .env.example .env
-```
-Open `.env` and insert your Shopify Storefront Token:
-```env
-VITE_SHOPIFY_STOREFRONT_TOKEN=your_token_here
-```
+Security Notes
 
-### 4. Start the Dev Server
-```bash
-npm run dev
-```
-The application will be available at `http://localhost:5173`.
+The Shopify Storefront API token should be configured in the Shopify Admin to accept requests only from the production domain (e.g., https://elya.at).
+All console.log and debugger statements are stripped automatically during the Vite production build to prevent data leakage.
+Dynamic content is sanitized via escapeHTML before DOM insertion to mitigate XSS vectors.
 
-### 5. Production Build
-To create a minified, cache-busting production build (ready for deployment):
-```bash
-npm run build
-```
-The output will be generated in the `/dist` directory.
 
-## 🔒 Security Notes
-- Ensure that the Shopify Storefront API token is configured in the Shopify Admin to *only* accept requests from your production domains (e.g., `https://elya.at`).
-- All `console.log` and `debugger` statements are stripped automatically during the Vite `build` step to prevent data leakage.
-
-## 📄 License
-All rights reserved © 2026 Elya Vision.
+License
+All rights reserved. Copyright 2026 Elya Vision.
